@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	<title>BootStrap+jQuery</title>
+
+	<!--引入bootstrap的css样式库-->
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!--css样式 -->
+	<link rel="stylesheet" href="stylesheets/style.css" type="text/css">
+
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-sm navbar-dark bg-secondary " id="navStandard">
+			<a class="navbar-brand" href="#">
+				<img src="images/logo.png"
+					alt="logo" />
+			</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navContent">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">首页</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#Container">信息</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">工具</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" id="navDropdown"
+							data-toggle="dropdown">
+							技能
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">HTML</a>
+							<a class="dropdown-item" href="#">CSS</a>
+							<a class="dropdown-item" href="#">JavaScript</a>
+						</div>
+					</li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item" id="">
+						<a class="nav-link" href="#">登录</a>
+					</li>
+					<li class="nav-item dropdown" id="">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+							<img src="images/portrait.jpg" alt="portrait" id="portrait-pic" />
+							个人中心
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#">设置</a>
+							<a class="dropdown-item" href="#">通知</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">退出</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- 首页 -->
+		<div class="jumbotron jumbotron-fluid" id="fullheight">
+			<div class="container">
+				<div class="row" id="news_ticker">
+					<ul class="ticker-list">
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>...</li>
+					</ul>
+				</div>
+				<div class="row justify-content-center">
+					<a class="btn btn-secondary btn-lg" href="#Container" role="button">Explore More</a>
+				</div>
+			</div>
+		</div>
+
+		
+		<!-- Container -->
+		<div class="container-fluid bg-light" id="Container">
+
+			<div class="row justify-content-center">
+				
+
+				<div class="col-8 col-md-3 collapse ds-block" id="sticky-box">
+					<div class="box-sticky" id="box-sticky">
+						<!-- 个人资料 -->
+						<div class="" id="">
+
+							<div class="user-intro d-flex flex-row ">
+								<div class="portrait-box ">
+									<a href="#">
+										<img src="images/portrait.jpg" class="portrait-pic">
+									</a>
+								</div>
+
+								<div class="user-info text-left">
+									<p class="name csdn-tracking-statistics tracking-click" data-mod="popu_379">
+										<a href="#" target="_blank" class="" id="uid">Adolph</a>
+									</p>
+								</div>
+							</div>
+
+							<div class="data-info d-flex dl-item">
+								<dl class="text-center" title="72">
+									<dt>原创</dt>
+									<dd><span class="count">72</span></dd>
+								</dl>
+								<dl class="text-center" id="fanBox" title="0">
+									<dt>粉丝</dt>
+									<dd><span class="count" id="fan">1</span></dd>
+								</dl>
+								<dl class="text-center" title="11">
+									<dt>喜欢</dt>
+									<dd><span class="count">11</span></dd>
+								</dl>
+								<dl class="text-center" title="7">
+									<dt>评论</dt>
+									<dd><span class="count">7</span></dd>
+								</dl>
+							</div>
+
+							<div class="grade-box clearfix">
+								<dl>
+									<dt>等级:</dt>
+									<dd title="44010">4万+ </dd>
+								</dl>
+								<dl>
+									<dt>访问:</dt>
+									<dd title="44010">4万+ </dd>
+								</dl>
+								<dl>
+									<dt>积分:</dt>
+									<dd title="1227">1227 </dd>
+								</dl>
+								<dl title="59138">
+									<dt>排名:</dt>
+									<dd>5万+</dd>
+								</dl>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+				<div class="col-12 col-md-9">
+					<div class="box-right ">
+						<!-- 过滤 -->
+						<div class="filter-box js-between">
+							
+							<form action="" id=see-Original>
+								<label class="check-box" for="check-Original">
+									<input onchange="" type="checkbox" name="Y" value="1" id="check-Original">
+									单选
+								</label>
+							</form>
+							<button class="navbar-dark ds-none" type="button" data-toggle="collapse" data-target="#sticky-box">
+									<span class="navbar-toggler-icon"></span>
+							</button>
+
+						</div>
+
+						<!-- 插入内容 -->
+						<div class="article-item-box">
+							<h4 class="title">
+								<a href="https://blog.csdn.net/qq_39704803/article/details/90402418" target="_blank">
+									<span class="article-type type-1 float-none">原</span>
+									layui table 分页还原已勾选行状态的方法 </a>
+							</h4>
+							<p class="content">
+								<a href="https://blog.csdn.net/qq_39704803/article/details/90402418" target="_blank">
+									在vue中有时候会遇到监听滚动事件的问题，这里我简单的讲一下自己遇到的。
+								</a>
+							</p>
+							<div class="info-box d-flex align-content-center">
+								<p>
+									<span class="date">2019-05-21 10:49:03</span>
+								</p>
+								<p class="point"></p>
+								<p>
+									<span class="read-num">阅读数 <span class="num">14</span> </span>
+								</p>
+								<p class="point"></p>
+								<p>
+									<span class="read-num">评论数 <span class="num">0</span> </span>
+								</p>
+							</div>
+						</div>
+
+						<div class="article-item-box csdn-tracking-statistics" data-articleid="81698897">
+							<h4 class="title">
+								<a href="https://blog.csdn.net/fyfy0613/article/details/81698897" target="_blank">
+									<span class="article-type type-2 float-none">转</span> 使用JS获取当前地理位置方法汇总 </a>
+							</h4>
+							<p class="content">
+								<a href="https://blog.csdn.net/fyfy0613/article/details/81698897" target="_blank">
+									1.手机WEB定位方法：
+									var getLocation = function (successFunc, errorFunc) {
+									//successFunc获取定位成功回调函数，errorFunc获取定位失败回调
+								</a>
+							</p>
+							<div class="info-box d-flex align-content-center">
+								<p>
+									<span class="date">2018-08-15 10:03:30</span>
+								</p>
+								<p class="point"></p>
+								<p>
+									<span class="read-num">阅读数 <span class="num">3904</span> </span>
+								</p>
+								<p class="point"></p>
+								<p>
+									<span class="read-num">评论数 <span class="num">0</span> </span>
+								</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="text-center foot">
+			<p>Copyright &copy; 2019.
+				<a target="_blank" href="https://github.com/Schicksal0823/webDemoOne/">Schicksal</a>
+				All rights reserved.
+			</p>
+		</footer>
+
+
+		<!--引入jQuery-->
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+			crossorigin="anonymous"></script>
+		<!--引入Popper.js-->
+		<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+			crossorigin="anonymous"></script>
+		<!--引入bootstrap-->
+		<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+			crossorigin="anonymous"></script>
+		<!--引入JS-->
+		<script type="text/javascript" src="javascripts/index.js"></script>
+
+</body>
+
+</html>
