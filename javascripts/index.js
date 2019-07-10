@@ -62,7 +62,9 @@ $(document).ready(() => {
 
 
             let addA_to_H4 = $("<a></a>").attr({"href" : "#","target" : "_blank"}).text(data.Title[randOffive]);
-            let addA_to_P = $("<a></a>").attr({"href" : "#","target" : "_blank"}).text(data.Content[randOffive]);
+            let addA_to_P = $("<a></a>").attr({"href" : "#","target" : "_blank"}).text(function(){
+				return data.Content[randOffive].slice(0,60) + "...";
+			});
 
             let addP_none = $("<p></p>");
             let addP_none_cf = addP_none.clone();
