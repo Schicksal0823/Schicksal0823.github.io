@@ -3,7 +3,7 @@ $(document).ready(() => {
 
 
     $.ajax({
-        url: "http://jsonplaceholder.typicode.com/posts",
+        url: "https://jsonplaceholder.typicode.com/posts",
         data: {},
         type: "GET",
         timeout: 5000,
